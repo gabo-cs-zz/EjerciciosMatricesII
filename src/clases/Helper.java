@@ -61,5 +61,16 @@ public class Helper {
         }
     }
     
+    public static void figura4(JTable tabla1, JTable tabla2){
+        int nf, m;
+        nf = tabla1.getRowCount();
+        m = nf/2;
+        for (int i = 0; i <= m; i++) {
+            tabla2.setValueAt(tabla1.getValueAt(i, m-i), i, m-i);
+            tabla2.setValueAt(tabla1.getValueAt(i, m+i), i, m+i);
+            tabla2.setValueAt(tabla1.getValueAt(nf-i-1, m-i), nf-i-1, m-i);
+            tabla2.setValueAt(tabla1.getValueAt(nf-i-1, m+i), nf-i-1, m+i);
+        }
+    }
     
 }
