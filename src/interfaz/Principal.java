@@ -315,12 +315,23 @@ public class Principal extends javax.swing.JFrame {
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
                     Helper.mensaje(this, "Para visualizar la letra B, el número de filas y columnas deben ser iguales e impares.", 3);
                 }
-                else if (nf < 5|| nc < 5 ) {
+                else if (nf < 5 || nc < 5 ) {
                     Helper.mensaje(this, "Por favor considere 5 como el mínimo de filas y columnas para formar la letra B.", 2);
                 }
                 else {
                     Helper.letraB(tblTablaInicial, tblTablaResultado);
                 }
+                break;
+            case 1:
+                if ((nc*2 - 3) != nf ) {
+                    Helper.mensaje(this, "Asegúrese de que se pueda visalizar la letra K correctamente.", 3);
+                }
+                else {
+                    Helper.letraK(tblTablaInicial, tblTablaResultado);
+                }
+                break;
+            case 2:
+                Helper.letraM(tblTablaInicial, tblTablaResultado);
                 break;
             case 11:
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
