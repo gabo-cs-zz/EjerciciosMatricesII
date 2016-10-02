@@ -311,6 +311,17 @@ public class Principal extends javax.swing.JFrame {
         tm2.setColumnCount(nc);
         op = cmbOperacion.getSelectedIndex();
         switch (op) {
+            case 0:
+                if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
+                    Helper.mensaje(this, "Para visualizar la letra B, el número de filas y columnas deben ser iguales e impares.", 3);
+                }
+                else if (nf < 5|| nc < 5 ) {
+                    Helper.mensaje(this, "Por favor considere 5 como el mínimo de filas y columnas para formar la letra B.", 2);
+                }
+                else {
+                    Helper.letraB(tblTablaInicial, tblTablaResultado);
+                }
+                break;
             case 11:
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
                     Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales e impares.", 3);
