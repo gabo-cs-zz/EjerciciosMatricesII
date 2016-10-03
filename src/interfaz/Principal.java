@@ -180,8 +180,8 @@ public class Principal extends javax.swing.JFrame {
             nc = Integer.parseInt(txtNumeroColumnas.getText());
             tm = (DefaultTableModel) tblTablaInicial.getModel();
             tm2 = (DefaultTableModel) tblTablaResultado.getModel();
-            if (nf < 2 || nc < 2) {
-                Helper.mensaje(this, "Por favor considere 2 como el mínimo para filas y columnas.", 2);
+            if (nf < 5 || nc < 5) {
+                Helper.mensaje(this, "Por favor considere 5 como el mínimo para filas y columnas.", 2);
                 txtNumeroFilas.setText("");
                 txtNumeroColumnas.setText("");
                 txtNumeroFilas.requestFocusInWindow();
@@ -315,9 +315,6 @@ public class Principal extends javax.swing.JFrame {
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
                     Helper.mensaje(this, "Para visualizar la letra B, el número de filas y columnas deben ser iguales e impares.", 3);
                 }
-                else if (nf < 5 || nc < 5 ) {
-                    Helper.mensaje(this, "Por favor considere 5 como el mínimo de filas y columnas para formar la letra B.", 2);
-                }
                 else {
                     Helper.letraB(tblTablaInicial, tblTablaResultado);
                 }
@@ -334,21 +331,15 @@ public class Principal extends javax.swing.JFrame {
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
                     Helper.mensaje(this, "Para visualizar la letra M, el número de filas y columnas deben ser iguales e impares.", 3);
                 }
-                else if (nf < 3 || nc < 3 ) {
-                    Helper.mensaje(this, "Por favor considere 3 como el mínimo de filas y columnas para formar la letra B.", 2);
-                }
                 else {
                     Helper.letraM(tblTablaInicial, tblTablaResultado);
                 }
                 break;
             case 3:
-                if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
-                    Helper.mensaje(this, "Para visualizar la letra W, el número de filas y columnas deben ser iguales e impares.", 3);
-                }
-                else if (nf < 5 || nc < 5 ) {
-                    Helper.mensaje(this, "Por favor considere 5 como el mínimo de filas y columnas para formar la letra B.", 2);
-                }
-                else {
+                if ((nf % 2 == 0 || nc % 2 == 0)) {
+                    Helper.mensaje(this, "Para visualizar la letra W, el número de filas y columnas deben ser impares.", 3);
+                
+                }else {
                     Helper.letraW(tblTablaInicial, tblTablaResultado);
                 }
                 break;
