@@ -131,8 +131,34 @@ public class Helper {
         }
     }
     
+    public static void letraJ(JTable tabla1, JTable tabla2){
+        int nf, nc, aux;
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+                if (i==0 || (j==nc/2 && i!=0) || (i==nf-1 && j<nc/2) || (j==0 && i>=nf/2 && i<nf-1)){
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
+    
     public static void figura4(JTable tabla1, JTable tabla2){
-        int nf, m;
+        int nf, nc, aux;
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+                if (i==(nf/2)-j || i==(nf/2)+j || j==(nc/2)+i || (j==(nc-1)/2 && i>(nc/2)+j) )  {
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
+        /*int nf, m;
         nf = tabla1.getRowCount();
         m = nf/2;
         for (int i = 0; i <= m; i++) {
@@ -140,7 +166,6 @@ public class Helper {
             tabla2.setValueAt(tabla1.getValueAt(i, m+i), i, m+i);
             tabla2.setValueAt(tabla1.getValueAt(nf-i-1, m-i), nf-i-1, m-i);
             tabla2.setValueAt(tabla1.getValueAt(nf-i-1, m+i), nf-i-1, m+i);
-        }
-    }
-    
+        }*/
+       
 }

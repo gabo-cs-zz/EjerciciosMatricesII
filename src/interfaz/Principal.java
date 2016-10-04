@@ -346,6 +346,14 @@ public class Principal extends javax.swing.JFrame {
             case 4:
                 Helper.letraQ(tblTablaInicial, tblTablaResultado);
                 break;
+            case 5:
+                if (nc % 2 == 0) {
+                    Helper.mensaje(this, "Para visualizar la letra J, el número de columnas debe ser impar.", 3);
+                }
+                else{ 
+                    Helper.letraJ(tblTablaInicial, tblTablaResultado);
+                }
+                break;
             case 11:
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
                     Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales e impares.", 3);
