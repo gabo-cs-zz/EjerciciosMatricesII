@@ -117,6 +117,20 @@ public class Helper {
         }
     }
     
+    public static void letraQ(JTable tabla1, JTable tabla2){
+        int nf, nc, aux;
+        nf = tabla1.getRowCount();
+        nc = tabla1.getColumnCount();
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                aux = (int) tabla1.getValueAt(i, j);
+                if ((i==0 && j!=0 && j!=nc-1)||(i==nf-2 && j!=0 && j!=nc-1) || (j==0 && i!=0 && i<=nf-3) || (j==nc-1 && i!=0 && i<=nf-3) || (j==nc-1 && i==nf-1)){
+                    tabla2.setValueAt(aux, i, j);
+                }
+            }
+        }
+    }
+    
     public static void figura4(JTable tabla1, JTable tabla2){
         int nf, m;
         nf = tabla1.getRowCount();
