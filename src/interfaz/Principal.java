@@ -354,6 +354,46 @@ public class Principal extends javax.swing.JFrame {
                     Helper.letraJ(tblTablaInicial, tblTablaResultado);
                 }
                 break;
+            case 6:
+                if (nf < 6) {
+                    Helper.mensaje(this, "Para visualizar la letra G, el número de filas debe ser mínimo de 6.", 3);
+                }
+                else{
+                    Helper.letraG(tblTablaInicial, tblTablaResultado);
+                }
+                break;
+            case 7:
+                if (nf != nc) {
+                    Helper.mensaje(this, "Para visualizar la letra R, el número de filas y columnas deben ser iguales.", 3);
+                }
+                else {
+                    Helper.letraR(tblTablaInicial, tblTablaResultado);
+                }
+                break;
+            case 8:
+                if (nf != nc) {
+                    Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales.", 3);
+                }
+                else {
+                    Helper.figura1(tblTablaInicial, tblTablaResultado);
+                }
+                break;
+            case 9:
+                if (nf != nc) {
+                    Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales.", 3);
+                }
+                else {
+                    Helper.figura2(tblTablaInicial, tblTablaResultado);
+                }
+                break;
+            case 10:
+                if ((nf % 2 != 0 && nc % 2 != 0) || (nf != nc)) {
+                    Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales y pares.", 3);
+                }
+                else {
+                    Helper.figura3(tblTablaInicial, tblTablaResultado);
+                }
+                break;
             case 11:
                 if ((nf % 2 == 0 && nc % 2 == 0) || (nf != nc)) {
                     Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales e impares.", 3);
