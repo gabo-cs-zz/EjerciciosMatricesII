@@ -61,7 +61,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("MATRICES - LETRAS Y FIGURAS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Datos iniciales:"));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -371,16 +371,16 @@ public class Principal extends javax.swing.JFrame {
                 }
                 break;
             case 8:
-                if (nf != nc) {
-                    Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales.", 3);
+                if ( (nf>nc && nf-nc > 1) || (nc>nf && nc-nf > 1)) {
+                    Helper.mensaje(this, "Asegúrese de que se pueda visalizar la figura correctamente.", 3);
                 }
                 else {
                     Helper.figura1(tblTablaInicial, tblTablaResultado);
                 }
                 break;
             case 9:
-                if (nf != nc) {
-                    Helper.mensaje(this, "Para visualizar esta figura, el número de filas y columnas deben ser iguales.", 3);
+                if ( (nf>nc && nf-nc > 1) || (nc>nf && nc-nf > 1)) {
+                    Helper.mensaje(this, "Asegúrese de que se pueda visalizar la figura correctamente.", 3);
                 }
                 else {
                     Helper.figura2(tblTablaInicial, tblTablaResultado);

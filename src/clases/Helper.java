@@ -183,7 +183,6 @@ public class Helper {
                 tabla2.setValueAt(tabla1.getValueAt(i, j), i, j);   
                 tabla2.setValueAt(tabla1.getValueAt(nf-i-1, j), nf-i-1, j);
             }
-            
         }
     }
     
@@ -191,12 +190,11 @@ public class Helper {
         int nf, nc;
         nf = tabla1.getRowCount();
         nc = tabla1.getColumnCount();
-        for (int i = 0; i < nf; i++) {
-            for (int j = i; j < nc-i; j++) {
-                tabla2.setValueAt(tabla1.getValueAt(j, i), j, i);   
-                tabla2.setValueAt(tabla1.getValueAt(j, nf-i-1), j, nf-i-1);
+        for (int j = 0; j < nc; j++) {
+            for (int i = j; i < nf-j; i++) {
+                tabla2.setValueAt(tabla1.getValueAt(i, j), i, j); 
+                tabla2.setValueAt(tabla1.getValueAt(i, nc-j-1), i, nc-j-1);
             }
-            
         }
     }
     
