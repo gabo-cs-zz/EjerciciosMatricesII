@@ -180,8 +180,8 @@ public class Principal extends javax.swing.JFrame {
             nc = Integer.parseInt(txtNumeroColumnas.getText());
             tm = (DefaultTableModel) tblTablaInicial.getModel();
             tm2 = (DefaultTableModel) tblTablaResultado.getModel();
-            if (nf < 5 || nc < 5) {
-                Helper.mensaje(this, "Por favor considere 5 como el mínimo para filas y columnas.", 2);
+            if (nf < 4 || nc < 4) {
+                Helper.mensaje(this, "Por favor considere 4 como el mínimo para filas y columnas.", 2);
                 txtNumeroFilas.setText("");
                 txtNumeroColumnas.setText("");
                 txtNumeroFilas.requestFocusInWindow();
